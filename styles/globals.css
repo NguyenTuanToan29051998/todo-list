@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import 'bootstrap/dist/css/bootstrap.css';
+@import 'react-quill/dist/quill.snow.css';
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif !important;
+}
+
+:root {
+  --primary: #AAC463;
+  --secondary: #DB9153;
+  --tertiary: #2D6AAA;
+  --quaternary: #1890FF;
+  --quinary: #AF3D29;
+  --black: #1D1929;
+  --dark: #565C65;
+  --dark-gray: #AAAAAA;
+  --red: #FF0A0A;
+  --conifer: #A4C955;
+  --flamenco: #E88E49;
+  --green: #A4C955;
+  --gray: #F2F6F9;
+  --Gray-20: #333333;
+  --gray-100: #F9FAFF;
+  --gray-200: #DEE6FF;
+  --gray-300: #CED4DA;
+  --gray-400: #ADADAD;
+  --mercury: #e6e6e6;
+  --white-smoke: #F5F5F5;
+  --cerulean: #046AAF;
+  --lavender: #EAEDFF;
+  --backround-gray: #EBEBEB;
+  --max-width-container: 1440px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.section-container {
+  max-width: 1274px;
+  margin: 0 auto;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+.psa-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ql-editor {
+  padding-left: 0;
+}
+
+

@@ -1,0 +1,263 @@
+.taskBody {
+  margin-top: 5rem !important;
+  max-width: 1200px;
+  margin: 0 auto;
+  border: 1px solid;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 2.75rem;
+
+  .leftArea {
+    width: 45%;
+    padding: 2rem;
+  }
+
+  .rightArea {
+    display: grid;
+    align-content: space-between;
+    width: 55%;
+    min-height: 16.25rem;
+    min-height: 450px;
+    border-left: 1px solid;
+    
+    .todoList {
+      padding: 2rem;
+      max-height: 700px;
+      overflow-y: auto;
+
+      &::-webkit-scrollbar {
+        width: 6px !important;
+        background-color: #d0d0d0;
+      }
+    
+      &::-webkit-scrollbar-thumb {
+        background-color: #0003;
+      }
+
+      .itemWrap {
+        margin-top: 2rem;
+        padding: 1.25rem 1.5rem;
+        border: 1px solid;
+  
+        .checkbox {
+          width: 1rem;
+        }
+  
+        .btnDetail {
+          background-color: #00bcd4;
+          border-radius: 0.25rem;
+          width: 100%;
+          border: none;
+          color: white;
+          padding: 0.25rem 0;
+          width: 5rem;
+        }
+  
+        .btnRemove {
+          background-color: #d9534f;
+          border-radius: 0.25rem;
+          width: 100%;
+          border: none;
+          color: white;
+          padding: 0.25rem 0;
+          width: 5rem;
+        }
+  
+      }
+  
+      .detailWrap {
+        padding: 1.5rem;
+        border: 1px solid;
+        border-top: none;
+      }
+    }
+
+    .bulkAction {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem;
+      background-color: #e0e0e0;
+      border-top: 1px solid;
+
+      .btnDetail {
+        background-color: #2196f3;
+        border-radius: 0.25rem;
+        width: 100%;
+        border: none;
+        color: white;
+        padding: 0.4rem 0;
+        width: 7rem;
+      }
+
+      .btnRemove {
+        background-color: #d9534f;
+        border-radius: 0.25rem;
+        width: 100%;
+        border: none;
+        color: white;
+        padding: 0.4rem 0;
+        width: 7rem;
+      }
+    }
+  }
+
+  .title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .name {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .inputField {
+    border-radius: 0.25rem;
+    border: 1px solid #adadad;
+    padding: 0.35rem 0.75rem;
+    outline: none;
+    width: 100%;
+  }
+
+  .inputDate {
+    border: 1px solid;
+    padding: 0.35rem 0.75rem;
+    outline: none;
+    width: 100%;
+  }
+
+  .textareaField {
+    width: 100%;
+    border: 1px solid;
+    font-size: 1rem;
+    padding: 13px;
+    outline: none;
+  }
+
+  .btnAdd {
+    background-color: #5cb85c;
+    border-radius: 0.25rem;
+    width: 100%;
+    border: none;
+    color: white;
+    padding: 0.25rem 0;
+    margin-top: 2rem;
+  }
+
+  .datepicker {
+    width: 40px;
+    height: 39px;
+    border: 1px solid;
+    border-left: none;
+
+    &Toggle {
+      display: flex;
+      position: relative;
+      width: 18px;
+      height: 19px;
+      top: 6px;
+      left: 6px;
+  
+      &Button {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+      }
+  
+      .datepickerInput {
+        position: absolute;
+        left: 0;
+        top: 4px;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        cursor: pointer;
+        box-sizing: border-box;
+  
+        // &::-webkit-inner-spin-button,
+        &::-webkit-calendar-picker-indicator {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          margin: 0;
+          padding: 0;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .dropdown {
+    position: relative;
+
+    input {
+      outline: none;
+    }
+
+    &Menu {
+      display: flex;
+      align-items: center;
+      border: 1px solid;
+      padding: 0.35rem 0.75rem;
+
+      input {
+        border: none;
+        width: 100%;
+      }
+
+      &Icon {
+        padding-left: 1rem;
+        cursor: pointer;
+      }
+    }
+
+    &Content {
+      position: absolute;
+      border: 1px solid;
+      border-top: none;
+      width: 100%;
+      background-color: white;
+
+      .item {
+        display: flex;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        &:hover {
+          background-color: #e5e7eb;
+        }
+      }
+    }
+  }
+  .error{
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: var(--red);
+  }
+}
+
+@media only screen and (max-width: 880px) {
+  .taskBody {
+    flex-direction: column;
+    padding: 0 2rem;
+
+    .leftArea {
+      width: 100%;
+      margin-bottom: 3rem;
+    }
+
+    .rightArea {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+}
